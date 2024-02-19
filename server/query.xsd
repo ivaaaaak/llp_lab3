@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="IDENTIFIER" type="xs:string"/>
+    <xs:element name="INTEGER" type="xs:integer"/>
+    <xs:element name="STRING" type="xs:string"/>
+    <xs:element name="FLOAT" type="xs:float"/>
+    <xs:element name="BOOLEAN" type="xs:boolean"/>
+
+
+    <xs:element name="EQ">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="IDENTIFIER"/>
+                <xs:choice>
+                    <xs:element ref="INTEGER"/>
+                    <xs:element ref="STRING"/>
+                    <xs:element ref="FLOAT"/>
+                    <xs:element ref="BOOLEAN"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="GT">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="IDENTIFIER"/>
+                <xs:choice>
+                    <xs:element ref="INTEGER"/>
+                    <xs:element ref="FLOAT"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+  
+    <xs:element name="LT">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="IDENTIFIER"/>
+                <xs:choice>
+                    <xs:element ref="INTEGER"/>
+                    <xs:element ref="FLOAT"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="NE">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="IDENTIFIER"/>
+                <xs:choice>
+                    <xs:element ref="INTEGER"/>
+                    <xs:element ref="STRING"/>
+                    <xs:element ref="FLOAT"/>
+                    <xs:element ref="BOOLEAN"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="AND">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice>
+                    <xs:element ref="EQ"/>
+                    <xs:element ref="GT"/>
+                    <xs:element ref="LT"/>
+                    <xs:element ref="NE"/>
+                </xs:choice>
+                <xs:choice>
+                    <xs:element ref="EQ"/>
+                    <xs:element ref="GT"/>
+                    <xs:element ref="LT"/>
+                    <xs:element ref="NE"/>
+                    <xs:element ref="AND"/>
+                    <xs:element ref="OR"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="OR">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice>
+                    <xs:element ref="EQ"/>
+                    <xs:element ref="GT"/>
+                    <xs:element ref="LT"/>
+                    <xs:element ref="NE"/>
+                </xs:choice>
+                <xs:choice>
+                    <xs:element ref="EQ"/>
+                    <xs:element ref="GT"/>
+                    <xs:element ref="LT"/>
+                    <xs:element ref="NE"/>
+                    <xs:element ref="AND"/>
+                    <xs:element ref="OR"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="WHERE">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element ref="AND"/>
+                <xs:element ref="OR"/>
+                <xs:element ref="EQ"/>
+                <xs:element ref="GT"/>
+                <xs:element ref="LT"/>
+                <xs:element ref="NE"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="FIELD_SET">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+                <xs:element ref="IDENTIFIER"/>
+                <xs:choice>
+                    <xs:element ref="INTEGER"/>
+                    <xs:element ref="STRING"/>
+                    <xs:element ref="FLOAT"/>
+                    <xs:element ref="BOOLEAN"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="NODE">
+        <xs:complexType>
+            <xs:attribute name="label" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="MATCH_QUERY">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="NODE"/>
+                <xs:element ref="WHERE" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CREATE_QUERY">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="NODE"/>
+                <xs:element ref="FIELD_SET"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="DELETE_QUERY">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="NODE"/>
+                <xs:element ref="WHERE" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="SET_QUERY">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="NODE"/>
+                <xs:element ref="WHERE" minOccurs="0"/>
+                <xs:element ref="FIELD_SET"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="query">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element ref="MATCH_QUERY"/>
+                <xs:element ref="CREATE_QUERY"/>
+                <xs:element ref="DELETE_QUERY"/>
+                <xs:element ref="SET_QUERY"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

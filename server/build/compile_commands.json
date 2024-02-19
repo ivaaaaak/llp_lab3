@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/home/ivaaaaak/llp_lab3/server/build",
+  "command": "/usr/bin/cc  -I/usr/include/libxml2  -g   -std=gnu11 -o CMakeFiles/server.dir/database/src/database.c.o   -c /home/ivaaaaak/llp_lab3/server/database/src/database.c",
+  "file": "/home/ivaaaaak/llp_lab3/server/database/src/database.c"
+},
+{
+  "directory": "/home/ivaaaaak/llp_lab3/server/build",
+  "command": "/usr/bin/cc  -I/usr/include/libxml2  -g   -std=gnu11 -o CMakeFiles/server.dir/database/src/file.c.o   -c /home/ivaaaaak/llp_lab3/server/database/src/file.c",
+  "file": "/home/ivaaaaak/llp_lab3/server/database/src/file.c"
+},
+{
+  "directory": "/home/ivaaaaak/llp_lab3/server/build",
+  "command": "/usr/bin/cc  -I/usr/include/libxml2  -g   -std=gnu11 -o CMakeFiles/server.dir/database/src/graph.c.o   -c /home/ivaaaaak/llp_lab3/server/database/src/graph.c",
+  "file": "/home/ivaaaaak/llp_lab3/server/database/src/graph.c"
+},
+{
+  "directory": "/home/ivaaaaak/llp_lab3/server/build",
+  "command": "/usr/bin/cc  -I/usr/include/libxml2  -g   -std=gnu11 -o CMakeFiles/server.dir/database/src/query.c.o   -c /home/ivaaaaak/llp_lab3/server/database/src/query.c",
+  "file": "/home/ivaaaaak/llp_lab3/server/database/src/query.c"
+},
+{
+  "directory": "/home/ivaaaaak/llp_lab3/server/build",
+  "command": "/usr/bin/cc  -I/usr/include/libxml2  -g   -std=gnu11 -o CMakeFiles/server.dir/src/executor.c.o   -c /home/ivaaaaak/llp_lab3/server/src/executor.c",
+  "file": "/home/ivaaaaak/llp_lab3/server/src/executor.c"
+},
+{
+  "directory": "/home/ivaaaaak/llp_lab3/server/build",
+  "command": "/usr/bin/cc  -I/usr/include/libxml2  -g   -std=gnu11 -o CMakeFiles/server.dir/src/network.c.o   -c /home/ivaaaaak/llp_lab3/server/src/network.c",
+  "file": "/home/ivaaaaak/llp_lab3/server/src/network.c"
+},
+{
+  "directory": "/home/ivaaaaak/llp_lab3/server/build",
+  "command": "/usr/bin/cc  -I/usr/include/libxml2  -g   -std=gnu11 -o CMakeFiles/server.dir/src/main.c.o   -c /home/ivaaaaak/llp_lab3/server/src/main.c",
+  "file": "/home/ivaaaaak/llp_lab3/server/src/main.c"
+},
+{
+  "directory": "/home/ivaaaaak/llp_lab3/server/build",
+  "command": "/usr/bin/cc  -I/usr/include/libxml2  -g   -std=gnu11 -o CMakeFiles/server.dir/src/xml.c.o   -c /home/ivaaaaak/llp_lab3/server/src/xml.c",
+  "file": "/home/ivaaaaak/llp_lab3/server/src/xml.c"
+}
+]

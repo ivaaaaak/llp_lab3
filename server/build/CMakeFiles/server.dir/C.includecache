@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ivaaaaak/llp_lab3/server/database/include/database.h
+file.h
+/home/ivaaaaak/llp_lab3/server/database/include/file.h
+
+/home/ivaaaaak/llp_lab3/server/database/include/file.h
+stdio.h
+-
+graph.h
+/home/ivaaaaak/llp_lab3/server/database/include/graph.h
+
+/home/ivaaaaak/llp_lab3/server/database/include/graph.h
+stdbool.h
+-
+stdint.h
+-
+stdlib.h
+-
+string.h
+-
+
+/home/ivaaaaak/llp_lab3/server/database/src/database.c
+../include/database.h
+/home/ivaaaaak/llp_lab3/server/database/include/database.h
+

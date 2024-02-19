@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/ivaaaaak/llp_lab3/client/build",
+  "command": "/usr/bin/cc  -I/usr/include/libxml2  -g   -std=gnu11 -o CMakeFiles/client.dir/parser.c.o   -c /home/ivaaaaak/llp_lab3/client/build/parser.c",
+  "file": "/home/ivaaaaak/llp_lab3/client/build/parser.c"
+},
+{
+  "directory": "/home/ivaaaaak/llp_lab3/client/build",
+  "command": "/usr/bin/cc  -I/usr/include/libxml2  -g   -std=gnu11 -o CMakeFiles/client.dir/lexer.c.o   -c /home/ivaaaaak/llp_lab3/client/build/lexer.c",
+  "file": "/home/ivaaaaak/llp_lab3/client/build/lexer.c"
+},
+{
+  "directory": "/home/ivaaaaak/llp_lab3/client/build",
+  "command": "/usr/bin/cc  -I/usr/include/libxml2  -g   -std=gnu11 -o CMakeFiles/client.dir/parser/src/query.c.o   -c /home/ivaaaaak/llp_lab3/client/parser/src/query.c",
+  "file": "/home/ivaaaaak/llp_lab3/client/parser/src/query.c"
+},
+{
+  "directory": "/home/ivaaaaak/llp_lab3/client/build",
+  "command": "/usr/bin/cc  -I/usr/include/libxml2  -g   -std=gnu11 -o CMakeFiles/client.dir/src/main.c.o   -c /home/ivaaaaak/llp_lab3/client/src/main.c",
+  "file": "/home/ivaaaaak/llp_lab3/client/src/main.c"
+},
+{
+  "directory": "/home/ivaaaaak/llp_lab3/client/build",
+  "command": "/usr/bin/cc  -I/usr/include/libxml2  -g   -std=gnu11 -o CMakeFiles/client.dir/src/xml.c.o   -c /home/ivaaaaak/llp_lab3/client/src/xml.c",
+  "file": "/home/ivaaaaak/llp_lab3/client/src/xml.c"
+},
+{
+  "directory": "/home/ivaaaaak/llp_lab3/client/build",
+  "command": "/usr/bin/cc  -I/usr/include/libxml2  -g   -std=gnu11 -o CMakeFiles/client.dir/src/network.c.o   -c /home/ivaaaaak/llp_lab3/client/src/network.c",
+  "file": "/home/ivaaaaak/llp_lab3/client/src/network.c"
+}
+]

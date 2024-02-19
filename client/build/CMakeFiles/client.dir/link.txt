@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/client.dir/parser.c.o CMakeFiles/client.dir/lexer.c.o CMakeFiles/client.dir/parser/src/query.c.o CMakeFiles/client.dir/src/main.c.o CMakeFiles/client.dir/src/xml.c.o CMakeFiles/client.dir/src/network.c.o  -o client  /usr/lib/x86_64-linux-gnu/libxml2.so 
